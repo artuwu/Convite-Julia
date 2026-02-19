@@ -6,7 +6,7 @@
 
 body {
     min-height: 100vh;
-    background: linear-gradient(135deg, #f3ede3, #e8dfd2);
+    background-color: #f1eadf;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,14 +15,14 @@ body {
 }
 
 .container {
-    background: #ffffff;
+    background-color: #f1eadf;
     width: 100%;
-    max-width: 1000px;
-    padding: 60px;
-    border-radius: 25px;
+    max-width: 850px;
+    padding: 70px;
+    border-radius: 20px;
     text-align: center;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(212, 175, 55, 0.25);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.07);
+    border: 1px solid rgba(198, 167, 94, 0.25);
 }
 
 h1 {
@@ -36,12 +36,11 @@ h1 {
 
 h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 52px;
+    font-size: 60px;
     margin-bottom: 25px;
-    color: #2c2c2c;
+    color: #a8894e;
     letter-spacing: 1px;
 }
-
 
 .descricao {
     font-size: 16px;
@@ -64,17 +63,18 @@ h2 {
     padding: 14px;
     border-radius: 40px;
     border: none;
-    background: linear-gradient(45deg, #d8bf83, #c6a75e);
-    color: #fff;
+    background: linear-gradient(45deg, #7dcfc4, #5fb8ac);
+    color: #ffffff;
     font-weight: 500;
     cursor: pointer;
     transition: 0.3s ease;
     margin-bottom: 15px;
+    letter-spacing: 1px;
 }
 
 .btn-confirmar:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(198, 167, 94, 0.4);
+    box-shadow: 0 10px 25px rgba(95, 184, 172, 0.4);
 }
 
 .btn-secundario {
@@ -128,7 +128,7 @@ h2 {
     justify-content: center;
     align-items: center;
     perspective: 1500px;
-    background: linear-gradient(135deg, #f3ede3, #e8dfd2);
+    background-color: #f1eadf;
     padding: 20px;
 }
 
@@ -164,7 +164,7 @@ h2 {
 }
 
 .back {
-    background: #ffffff;
+    background: #f1e5d0;
     transform: rotateY(180deg);
     padding: 40px;
 }
