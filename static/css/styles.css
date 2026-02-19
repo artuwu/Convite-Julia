@@ -6,7 +6,7 @@
 
 body {
     min-height: 100vh;
-    background-color: #f1eadf;
+    background-color: #cabda5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-    background-color: #f1eadf;
+    background-color: #f0e6d5;
     width: 100%;
     max-width: 850px;
     padding: 70px;
@@ -26,19 +26,20 @@ body {
 }
 
 h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
+    font-family: "Rouge Script", cursive;
+    font-size: 34px;
     letter-spacing: 4px;
     font-weight: 400;
-    color: #c6a75e; /* dourado leve */
-    margin-bottom: 15px;
+    color: #967e47; /* dourado leve */
+    margin-bottom: 10px;
 }
 
 h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 60px;
+    font-family: "Rouge Script", cursive;
+    font-size: 90px;
+    font-weight: lighter;
     margin-bottom: 25px;
-    color: #a8894e;
+    color: #b49760;
     letter-spacing: 1px;
 }
 
@@ -63,7 +64,7 @@ h2 {
     padding: 14px;
     border-radius: 40px;
     border: none;
-    background: linear-gradient(45deg, #7dcfc4, #5fb8ac);
+    background: linear-gradient(45deg, #93cec6, #57c7b8);
     color: #ffffff;
     font-weight: 500;
     cursor: pointer;
@@ -77,48 +78,32 @@ h2 {
     box-shadow: 0 10px 25px rgba(95, 184, 172, 0.4);
 }
 
-.btn-secundario {
-    width: 260px;
-    padding: 14px;
-    border-radius: 40px;
-    border: 1px solid #c6a75e;
-    background: transparent;
-    color: #c6a75e;
-    cursor: pointer;
-    transition: 0.3s ease;
-}
-
-.btn-secundario:hover {
-    background: #c6a75e;
-    color: #fff;
-}
-
 .input-nome {
     width: 100%;
     max-width: 420px;
     padding: 14px 20px;
     border-radius: 40px;
     border: 1.5px solid #d8bf83;
-    background: #f8f4ed;
+    background: #ececec;
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     text-align: center;
     color: #3a3a3a;
     outline: none;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(198, 167, 94, 0.08);
+    box-shadow: 0 5px 15px rgba(198, 167, 94, 0.1–0.25);
     margin-bottom: 18px;
 }
 
 .input-nome::placeholder {
-    color: #b7a67c;
+    color: #c0aa74;
     letter-spacing: 1px;
 }
 
 .input-nome:focus {
-    background: #ffffff;
+    background: #e0e0e0;
     border-color: #c6a75e;
-    box-shadow: 0 8px 25px rgba(198, 167, 94, 0.25);
+    box-shadow: 0 8px 25px rgba(198, 167, 94, 0.1–0.25);
     transform: scale(1.02);
 }
 
@@ -128,13 +113,18 @@ h2 {
     justify-content: center;
     align-items: center;
     perspective: 1500px;
-    background-color: #f1eadf;
+    background-color: #cabda5;
     padding: 20px;
+}
+
+.convite{
+    background-color: #f0e1c9;
+    border-radius: 0;
 }
 
 .envelope {
     width: 100%;
-    max-width: 900px;
+    max-width: 1200px;
     position: relative;
     transform-style: preserve-3d;
     transition: transform 1s ease;
@@ -143,8 +133,7 @@ h2 {
 
 .front, .back {
     width: 100%;
-    min-height: 600px;
-    border-radius: 20px;
+    max-height: 690px;
     backface-visibility: hidden;
 }
 
@@ -152,23 +141,58 @@ h2 {
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(135deg, #d8bf83, #c6a75e);
+    background: linear-gradient(135deg, #c9b080, #dbc799);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #3a3a3a;
     font-family: 'Cormorant Garamond', serif;
     font-size: 32px;
     letter-spacing: 3px;
-    height: 600px;
+    height: 740px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.07);
 }
 
 .back {
-    background: #f1e5d0;
+    background: linear-gradient(135deg, #f5dcaf, #eed291);
     transform: rotateY(180deg);
     padding: 40px;
+    box-shadow: -5px 5px 5px 5px rgba(0, 0, 0, 0.07);
 }
 
 .envelope.open {
     transform: rotateY(180deg);
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup.hidden {
+    display: none;
+}
+
+.popup button {
+    margin-top: 10px;
+    padding: 5px 15px;
+    border: none;
+    background: #f05454;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    background: #d94343;
 }

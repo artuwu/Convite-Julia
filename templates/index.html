@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <title>Convite 18 Anos</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/6655/6655482.png">
 </head>
 <body>
+
+<div id="popup" class="popup hidden">
+    <span id="popup-msg"></span>
+    <button onclick="fecharPopup()">Fechar</button>
+</div>
+
 
 <div class="envelope-wrapper">
     <div class="envelope" onclick="abrirCarta()">
@@ -31,9 +40,9 @@
                     <p><strong>Local:</strong> Hausmesse Casa de Eventos <br> Estr. Motucas, 3122 - Vila Nova</p>
                 </div>
 
-                <form method="POST">
+                <form method="POST" id="confirmForm">
                     <input type="text" name="nome" placeholder="Seu primeiro nome" required class="input-nome">
-                    <button type="submit" class="btn-confirmar" onclick="this.disabled=true; this.innerText='Confirmando...'">Confirmar Presença</button>
+                    <button type="submit" class="btn-confirmar">Confirmar Presença</button>
                 </form>
             </div>
         </div>
@@ -49,8 +58,25 @@ function abrirCarta() {
     document.querySelector(".envelope").classList.add("open");
     aberta = true;
 }
-</script>
 
+function mostrarPopup(mensagem) {
+    const popup = document.getElementById("popup");
+    const msg = document.getElementById("popup-msg");
+    msg.innerText = mensagem;
+    popup.classList.remove("hidden");
+}
+
+function fecharPopup() {
+    document.getElementById("popup").classList.add("hidden");
+}
+
+// Mostrar pop-up automaticamente se o Flask enviar erro ou sucesso
+{% if sucesso %}
+    mostrarPopup("{{ sucesso }}");
+{% elif erro %}
+    mostrarPopup("{{ erro }}");
+{% endif %}
+</script>
 
 </body>
 </html>
