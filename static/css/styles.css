@@ -129,7 +129,7 @@ h2 {
     align-items: center;
     perspective: 1500px;
     background: linear-gradient(135deg, #f3ede3, #e8dfd2);
-    padding: 40px;
+    padding: 20px;
 }
 
 .envelope {
@@ -166,7 +166,7 @@ h2 {
 .back {
     background: #ffffff;
     transform: rotateY(180deg);
-    padding: 20px;
+    padding: 40px;
 }
 
 .envelope.open {
