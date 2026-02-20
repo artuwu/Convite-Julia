@@ -204,6 +204,10 @@ h2 {
         max-width: 700px;
     }
 
+    h1 {
+        font-size: 30px;
+    }
+
     h2 {
         font-size: 70px;
     }
@@ -232,6 +236,10 @@ h2 {
     .container {
         padding: 40px;
         max-width: 600px;
+    }
+
+    h2 {
+        font-size: 26
     }
 
     h2 {
